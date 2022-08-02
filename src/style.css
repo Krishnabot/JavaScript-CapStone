@@ -42,6 +42,82 @@
     color: rgb(112, 110, 110);
   }
 
+
+.meal-list {
+  width: 100vw;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 50px;
+  margin-bottom: 20px;
+}
+
+.meal-container {
+  margin-bottom: 90px;
+}
+
+.meal-card {
+  margin: 30px auto;
+  width: 400px;
+  height: 400px;
+  border-radius: 40px;
+  box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.meal-card .meal-img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+}
+
+.meal-card .meal-img img {
+  width: inherit;
+  height: inherit;
+  border-radius: 40px;
+  object-fit: cover;
+}
+
+.meal-card .meal-name {
+  text-align: center;
+  border-radius: 0 0 40px 40px;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(56, 55, 55);
+}
+
+.meal-card:hover {
+  transform: scale(0.9, 0.9);
+  box-shadow:
+    5px 5px 30px 15px rgba(0, 0, 0, 0.25),
+    -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
+}
+
+.meal-reaction {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 80%;
+  margin: auto;
+  gap: 10px;
+}
+
+.like,
+.comment {
+  border: 1px solid #3498db;
+  height: 40px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+  transition: all 150ms ease-in-out;
+}
+
+.like:hover,
+.comment:hover {
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+
   #footer {
     margin-left: 20%;
     font-family: sans-serif;

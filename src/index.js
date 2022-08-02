@@ -1,2 +1,3 @@
-import from 'lodash';
 import './style.css';
+import './module/consumeAPI.js';
+
