@@ -21,6 +21,7 @@ const fetchMeal = async () => {
 
       MealList.appendChild(newMeal);
     });
+    let mealCount = Meallist.length;
   };
 
   const fetchURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=american';
