@@ -1,2 +1,2 @@
-import _ from "lodash";
-import "./style.css";
+import './style.css';
+import './module/consumeAPI.js';
