@@ -9,10 +9,10 @@
 }
 
 .page-img {
-    width: 10%;
-    margin-top: 2%;
-    margin-bottom: -7%;
-    margin-left: 15%;
+  width: 10%;
+  margin-top: 2%;
+  margin-bottom: -7%;
+  margin-left: 15%;
 }
 
 .restaurant-title {
@@ -21,27 +21,26 @@
 }
 
 .restaurant-title:hover {
-    color: rgb(112, 110, 110);
-  }
+  color: rgb(112, 110, 110);
+}
 
 .menu1 {
   text-decoration: none;
-  color: black; 
+  color: black;
 }
 
 .menu1:hover {
-    color: rgb(112, 110, 110);
-  }
+  color: rgb(112, 110, 110);
+}
 
 .menu2 {
-    text-decoration: none;
-    color: black; 
-  }
+  text-decoration: none;
+  color: black;
+}
 
-  .menu2:hover {
-    color: rgb(112, 110, 110);
-  }
-
+.menu2:hover {
+  color: rgb(112, 110, 110);
+}
 
 .meal-list {
   width: 100vw;
@@ -118,26 +117,26 @@
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 
-  #footer {
-    margin-left: 20%;
-    font-family: sans-serif;
-    font-size: medium;
-  }
+#footer {
+  margin-left: 20%;
+  font-family: sans-serif;
+  font-size: medium;
+}
 
-  .name1 {
-    text-decoration: none;
-    color: rgb(63, 62, 62);
-  }
+.name1 {
+  text-decoration: none;
+  color: rgb(63, 62, 62);
+}
 
-  .name1:hover {
-    color: rgb(154, 153, 153);
-  }
+.name1:hover {
+  color: rgb(154, 153, 153);
+}
 
-  .name2 {
-    text-decoration: none;
-    color: rgb(63, 62, 62);
-  }
+.name2 {
+  text-decoration: none;
+  color: rgb(63, 62, 62);
+}
 
-  .name2:hover {
-    color: rgb(154, 153, 153);
-  }
+.name2:hover {
+  color: rgb(154, 153, 153);
+}
