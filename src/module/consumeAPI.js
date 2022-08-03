@@ -21,14 +21,16 @@ const fetchMeal = async () => {
 
       MealList.appendChild(newMeal);
     });
-    const mealCount = Meallist.length;
   };
 
-  const fetchURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=american';
+  const fetchURL =
+    "https://www.themealdb.com/api/json/v1/1/filter.php?a=american";
   const meals = await fetch(fetchURL)
     .then((response) => response.json())
     .then((data) => data.meals);
   PopulateMeals(meals);
+  const MealCount = document.querySelector(".menuCount");
+  MealCount.innerHTML = `${meals.length}`;
 };
 
 fetchMeal();

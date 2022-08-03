@@ -125,7 +125,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _module_consumeAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/consumeAPI.js */ \"./src/module/consumeAPI.js\");\n/* harmony import */ var _module_consumeAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_module_consumeAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _module_consumeAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./module/consumeAPI.js */ \"./src/module/consumeAPI.js\");\n/* harmony import */ var _module_consumeAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_module_consumeAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _assets_images_restaurant_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./assets/images/restaurant.jpg */ \"./src/assets/images/restaurant.jpg\");\n\n\n\n\nconst PageImage = document.querySelector(\".page-img\");\nPageImage.src = _assets_images_restaurant_jpg__WEBPACK_IMPORTED_MODULE_2__;\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ }),
 
@@ -135,7 +135,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sty
   \**********************************/
 /***/ (() => {
 
-eval("const MealList = document.querySelector('.meal-list');\nconst fetchMeal = async () => {\n  const PopulateMeals = (meals) => {\n    meals.forEach((element) => {\n      const newMeal = document.createElement('div');\n      newMeal.classList.add('meal-container');\n      newMeal.innerHTML = ` \n      <div class=\"meal-card\">\n        <div class =\"meal-img\">\n          <img src=\"${element.strMealThumb}\" alt=\"${element.strMeal}\">\n        </div>\n        <div class=\"meal-info\">\n          <h4 class=\"meal-name\">${element.strMeal}</h4>\n          <div class = \"meal-reaction\">\n          <button class=\"like\" data=\"${element.idMeal}\"> Like </button>\n          <button class =\"comment\" data=\"${element.idMeal}\">Comment</button>\n          </div>\n          </div>\n          </div>\n`;\n\n      MealList.appendChild(newMeal);\n    });\n    const mealCount = Meallist.length;\n  };\n\n  const fetchURL = 'https://www.themealdb.com/api/json/v1/1/filter.php?a=american';\n  const meals = await fetch(fetchURL)\n    .then((response) => response.json())\n    .then((data) => data.meals);\n  PopulateMeals(meals);\n};\n\nfetchMeal();\n\n\n//# sourceURL=webpack://to-do-list/./src/module/consumeAPI.js?");
+eval("const MealList = document.querySelector('.meal-list');\nconst fetchMeal = async () => {\n  const PopulateMeals = (meals) => {\n    meals.forEach((element) => {\n      const newMeal = document.createElement('div');\n      newMeal.classList.add('meal-container');\n      newMeal.innerHTML = ` \n      <div class=\"meal-card\">\n        <div class =\"meal-img\">\n          <img src=\"${element.strMealThumb}\" alt=\"${element.strMeal}\">\n        </div>\n        <div class=\"meal-info\">\n          <h4 class=\"meal-name\">${element.strMeal}</h4>\n          <div class = \"meal-reaction\">\n          <button class=\"like\" data=\"${element.idMeal}\"> Like </button>\n          <button class =\"comment\" data=\"${element.idMeal}\">Comment</button>\n          </div>\n          </div>\n          </div>\n`;\n\n      MealList.appendChild(newMeal);\n    });\n    let mealCount = Meallist.length\n  };\n\n  const fetchURL =\n    \"https://www.themealdb.com/api/json/v1/1/filter.php?a=american\";\n  const meals = await fetch(fetchURL)\n    .then((response) => response.json())\n    .then((data) => data.meals);\n  PopulateMeals(meals);\n  console.log(meals.length);\n  const MealCount = document.querySelector(\".menuCount\");\n  MealCount.innerHTML = `${meals.length}`;\n};\n\nfetchMeal();\n\n\n//# sourceURL=webpack://to-do-list/./src/module/consumeAPI.js?");
+
+/***/ }),
+
+/***/ "./src/assets/images/restaurant.jpg":
+/*!******************************************!*\
+  !*** ./src/assets/images/restaurant.jpg ***!
+  \******************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+"use strict";
+eval("module.exports = __webpack_require__.p + \"529c656537a3708efab4.jpg\";\n\n//# sourceURL=webpack://to-do-list/./src/assets/images/restaurant.jpg?");
 
 /***/ })
 
