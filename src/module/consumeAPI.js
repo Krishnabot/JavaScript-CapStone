@@ -28,6 +28,8 @@ const fetchMeal = async () => {
     .then((response) => response.json())
     .then((data) => data.meals);
   PopulateMeals(meals);
+  const MealCount = document.querySelector('.menuCount');
+  MealCount.innerHTML = `${meals.length}`;
 };
 
 fetchMeal();
