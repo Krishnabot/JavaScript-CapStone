@@ -109,6 +109,10 @@
   width: 100%;
   box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
   transition: all 150ms ease-in-out;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .like:hover,
@@ -139,4 +143,8 @@
 
 .name2:hover {
   color: rgb(154, 153, 153);
+}
+
+.heart-active{
+    color: red;
 }
