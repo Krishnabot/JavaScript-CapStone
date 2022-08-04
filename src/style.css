@@ -140,3 +140,42 @@
 .name2:hover {
   color: rgb(154, 153, 153);
 }
+
+.model-container .model {
+  display: none;
+  position: fixed;
+  top: 2%;
+  left: 5%;
+  right: 5%;
+  bottom: 2%;
+  background: #fff;
+  border-radius: 10px;
+}
+
+.card {
+  display: grid;
+  justify-content: center;
+  grid-auto-flow: column;
+  font-family: inter, sans-serif;
+  grid-template-rows: repeat(11, 1%);
+  grid-template-columns: repeat(3, 40%);
+  margin-top: 15%;
+  margin-left: 12%;
+  margin-bottom: 15%;
+  row-gap: 15%;
+}
+
+.card h1 {
+  color: black;
+}
+
+/* .model-container.show {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 200vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+} */
