@@ -1,4 +1,5 @@
 import { Displaylikes, like } from './GetAddLike.js';
+import DisplayCount from './count.js';
 
 const MealList = document.querySelector('.meal-list');
 const fetchMeal = async () => {
@@ -30,8 +31,6 @@ const fetchMeal = async () => {
     .then((response) => response.json())
     .then((data) => data.meals);
   PopulateMeals(meals);
-  const MealCount = document.querySelector('.menuCount');
-  MealCount.innerHTML = `${meals.length}`;
 
   const LikeCount = document.querySelectorAll('.likecount');
   const btnsArr = Array.from(LikeCount);
@@ -45,3 +44,4 @@ const fetchMeal = async () => {
 
 fetchMeal();
 Displaylikes();
+DisplayCount();
