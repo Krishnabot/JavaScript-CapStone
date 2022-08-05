@@ -1,3 +1,5 @@
+import { Displaylikes, like } from './GetAddLike.js';
+
 const MealList = document.querySelector('.meal-list');
 const fetchMeal = async () => {
   const PopulateMeals = (meals) => {
@@ -12,8 +14,8 @@ const fetchMeal = async () => {
         <div class="meal-info">
           <h4 class="meal-name">${element.strMeal}</h4>
           <div class = "meal-reaction">
-          <button class="like" data="${element.idMeal}"> Like </button>
-          <button class ="comment" data="${element.idMeal}">Comment</button>
+<button class = "like"><span class= "likecount" data="${element.idMeal}">0</span><i class="fas fa-heart" data="${element.idMeal}"></i></button>         
+<button class ="comment" data="${element.idMeal}">Comment</button>
           </div>
           </div>
           </div>
@@ -30,6 +32,16 @@ const fetchMeal = async () => {
   PopulateMeals(meals);
   const MealCount = document.querySelector('.menuCount');
   MealCount.innerHTML = `${meals.length}`;
+
+  const LikeCount = document.querySelectorAll('.likecount');
+  const btnsArr = Array.from(LikeCount);
+  for (let i = 0; i < btnsArr.length; i += 1) {
+    btnsArr[i].addEventListener('click', () => {
+      setTimeout(() => like(), 2000);
+      Displaylikes();
+    });
+  }
 };
 
 fetchMeal();
+Displaylikes();
