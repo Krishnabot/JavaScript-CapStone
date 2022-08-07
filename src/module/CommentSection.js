@@ -63,4 +63,4 @@ const sendComment = () => {
   });
 };
 
-export default sendComment;
+export { sendComment, displayComments };
