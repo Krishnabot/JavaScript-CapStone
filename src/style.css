@@ -150,6 +150,10 @@
   width: 100%;
   box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
   transition: all 150ms ease-in-out;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  align-items: center;
 }
 
 .like:hover,
@@ -180,56 +184,4 @@
 
 .name2:hover {
   color: rgb(154, 153, 153);
-}
-
-.model-container .model {
-  display: none;
-  position: fixed;
-  top: 2%;
-  left: 5%;
-  right: 5%;
-  bottom: 2%;
-  background: #fff;
-  border-radius: 10px;
-}
-
-.card {
-  display: grid;
-  justify-content: center;
-  grid-auto-flow: column;
-  font-family: inter, sans-serif;
-  grid-template-rows: repeat(11, 1%);
-  grid-template-columns: repeat(3, 40%);
-  margin-top: 15%;
-  margin-left: 12%;
-  margin-bottom: 15%;
-  row-gap: 15%;
-}
-
-.card h1 {
-  color: black;
-}
-
-#cards {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: rgba(0, 0, 0, 0.878);
-}
-
-.meal-info2 {
-  width: 260%;
-  height: 100%;
-  margin-left: -80%;
-  background: rgba(0, 0, 0, 0.878);
-  color: white;
-  margin-top: 7.5%;
-  text-align: center;
-}
-
-.fa-solid {
-  color: grey;
-  margin-top: 3%;
-  margin-left: 95%;
 }

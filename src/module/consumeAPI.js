@@ -1,5 +1,8 @@
 import popupData from '../pop-up.js';
 
+import { Displaylikes, like } from './GetAddLike.js';
+import DisplayCount from './count.js';
+
 const MealList = document.querySelector('.meal-list');
 const fetchMeal = async () => {
   const PopulateMeals = (meals) => {
@@ -15,7 +18,7 @@ const fetchMeal = async () => {
           <h4 class="meal-name">${element.strMeal}</h4>
           <div class = "meal-reaction">
           <button class="like" data="${element.idMeal}"> Like </button>
-          <button class ="comment" data="${element.idMeal}" id="containerBtn${element.idMeal}">Comment</button>
+          <button class ="comment" data="${element.idMeal}">Comment</button>
           </div>
           </div>
           </div>
@@ -38,8 +41,17 @@ const fetchMeal = async () => {
     .then((response) => response.json())
     .then((data) => data.meals);
   PopulateMeals(meals);
-  const MealCount = document.querySelector('.menuCount');
-  MealCount.innerHTML = `${meals.length}`;
+
+  const LikeCount = document.querySelectorAll('.likecount');
+  const btnsArr = Array.from(LikeCount);
+  for (let i = 0; i < btnsArr.length; i += 1) {
+    btnsArr[i].addEventListener('click', () => {
+      setTimeout(() => like(), 2000);
+      Displaylikes();
+    });
+  }
 };
 
 fetchMeal();
+Displaylikes();
+DisplayCount();
