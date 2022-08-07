@@ -1,15 +1,15 @@
-import popup from "./popup.js";
+import popup from './popup.js';
 
-import { Displaylikes, like } from "./GetAddLike.js";
-import DisplayCount from "./count.js";
+import { Displaylikes, like } from './GetAddLike.js';
+import DisplayCount from './count.js';
 
-const MealList = document.querySelector(".meal-list");
+const MealList = document.querySelector('.meal-list');
 const fetchMeal = async () => {
   const MealsByArea = async (area) => {
     const PopulateMeals = (meals) => {
       meals.forEach((element) => {
-        const newMeal = document.createElement("div");
-        newMeal.classList.add("meal-container");
+        const newMeal = document.createElement('div');
+        newMeal.classList.add('meal-container');
         newMeal.innerHTML = ` 
       <div class="meal-card">
         <div class ="meal-img">
@@ -35,41 +35,27 @@ const fetchMeal = async () => {
     PopulateMeals(meals);
     popup();
   };
-  const menuCount = document.getElementsByClassName("menuCount");
-  const printCount = async (area) => {
-    const fetchURL = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`;
-    const meals = await fetch(fetchURL)
-      .then((res) => res.json())
-      .then((data) => data.meals);
 
-    for (let i = 0; i < menuCount.length; i += 1) {
-      menuCount[i].innerHTML = "";
-      if (menuCount[i].classList.contains(area)) {
-        menuCount[i].innerHTML = `(${meals.length})`;
-      }
-    }
-  };
-
-  const navlinks = document.querySelectorAll("nav li");
+  const navlinks = document.querySelectorAll('nav li');
   const resetLinks = () => {
     for (let i = 0; i < navlinks.length; i += 1) {
-      navlinks[i].classList.remove("active");
+      navlinks[i].classList.remove('active');
     }
   };
 
   for (let i = 0; i < navlinks.length; i += 1) {
-    navlinks[i].addEventListener("click", () => {
+    navlinks[i].addEventListener('click', () => {
       const area = navlinks[i].textContent.toLowerCase();
       MealsByArea(area);
-      printCount(area);
+      DisplayCount(area);
       resetLinks();
       setTimeout(() => like(), 500);
       Displaylikes();
-      navlinks[i].classList.add("active");
+      navlinks[i].classList.add('active');
     });
   }
-  MealsByArea("american");
-  printCount("american");
+  MealsByArea('american');
+  DisplayCount('american');
 };
 
 fetchMeal();
