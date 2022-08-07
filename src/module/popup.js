@@ -44,7 +44,7 @@ const popup = async () => {
 
             </ul>
           </div>
-          <div class = "text-center">
+          <div class = "text-center2">
             <h3> Add a comment </h3> 
           </div>
       
