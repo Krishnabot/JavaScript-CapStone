@@ -2,6 +2,7 @@ import popup from './popup.js';
 
 import { Displaylikes, like } from './GetAddLike.js';
 import DisplayCount from './count.js';
+import { displayComments } from './CommentSection.js';
 
 const MealList = document.querySelector('.meal-list');
 const fetchMeal = async () => {
@@ -56,6 +57,7 @@ const fetchMeal = async () => {
   }
   MealsByArea('american');
   DisplayCount('american');
+  displayComments();
 };
 
 fetchMeal();

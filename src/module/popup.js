@@ -1,5 +1,5 @@
 /* eslint-disable no-unused-vars */
-import sendComment from './CommentSection.js';
+import { sendComment } from './CommentSection.js';
 
 const popup = async () => {
   const header = document.querySelector('header');
