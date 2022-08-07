@@ -5,7 +5,7 @@ const Displaylikes = async () => {
     .then((response) => response.json())
     .then((data) => data);
 
-  const LikeCounter = document.getElementsByClassName('likecounter');
+  const LikeCounter = document.getElementsByClassName('likecount');
   const likeCountArray = Array.from(LikeCounter);
 
   likeCountArray.forEach((likecounter) => {
@@ -48,6 +48,6 @@ const like = () => {
   });
 };
 
-setTimeout(() => like(), 3000);
+setTimeout(() => like(), 500);
 
 export { Displaylikes, like };
