@@ -134,3 +134,25 @@
 .hidden {
   display: none !important;
 }
+
+.titme {
+  text-align: center;
+  margin-left: -30%;
+}
+
+.modal-header-img {
+  margin-left: 25%;
+}
+
+.add-comments {
+  text-align: center;
+}
+
+.text-center2 {
+  text-align: center;
+}
+
+.right {
+  margin-top: -20%;
+  margin-left: 25%;
+}
