@@ -1,5 +1,5 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-## Hello Thsi is Our Capstone Project for second Module a6 Microverse.
+## Hello This is Our Capstone Project for second Module at Microverse.
 - We have used [MealDbAPI](https://www.themealdb.com/api.php)
 
 ## Learning objectives
@@ -31,7 +31,7 @@
 
 ## Live Demo 
 
-[Live Demo Link](https://krishnabot.github.io/To-Do-List/dist/)
+[Live Demo Link](https://krishnabot.github.io/JavaScript-CapStone/dist/)
 
 ## Getting Started 
 
