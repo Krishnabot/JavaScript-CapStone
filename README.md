@@ -1,6 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 ## Hello This is Our Capstone Project for second Module at Microverse.
-- We have used [MealDbAPI](https://www.themealdb.com/api.php)
+- It is a Menu Website. where most Popular American French and Chinese Menu are can be found along with their ingridients and recipie.
+- User can like and comment about the menu.
+- [MealDbAPI](https://www.themealdb.com/api.php) is used  to fetch all the Menu. 
+- [InvolvementAPI](https://www.notion.so/Involvement-API-869e60b5ad104603aa6db59e08150270) is used for all user interaction, i.e  Like and Comments. 
 
 ## Learning objectives
 - Use JavaScript to make websites dynamic and build basic single page apps.
@@ -54,14 +57,14 @@
 - LinkedIn: [Maxmilano](https://github.com/renercrows)
 - Twitter: [@Maxmilano](https://twitter.com/renercrows)
 
+## Project Explaination
+Here is a [Video](https://www.loom.com/share/69e3971a82174c95aad8cab4d4d1f23a)explaing our Project. 
 
 ## 🤝 Contributing
-## Loom Video
-Here is a [Loom Video](https://www.loom.com/share/69e3971a82174c95aad8cab4d4d1f23a)explaing our Project. 
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/Krishnabot/JavaScript-CapStone/issues).
 
 ## Show your support
 
