@@ -55,10 +55,6 @@
 - Twitter: [@Maxmilano](https://twitter.com/renercrows)
 
 
-## Collaboration Partner
-
-- GitHub: [@Jeanbulambo](https://github.com/Jeanbulambo)
-
 ## 🤝 Contributing
 ## Loom Video
 Here is a [Loom Video](https://www.loom.com/share/69e3971a82174c95aad8cab4d4d1f23a)explaing our Project. 

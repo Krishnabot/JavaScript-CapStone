@@ -1,17 +1,51 @@
-.nav-links {
-  display: flex;
-  margin-left: 25%;
-  font-family: sans-serif;
-  font-size: large;
-  gap: 7%;
-  list-style: none;
+:root {
+  background-color: #ecf5ff;
+  font-size: 62.5%;
 }
 
-.page-img {
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+}
+
+header {
+  padding-bottom: 6em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  margin-bottom: 9rem;
+  background: linear-gradient(to right, #5B86E5, #36D1DC);
+}
+
+.nav-links {
+  display: flex;
+  font-size: 2rem;
+  align-items: center;
+  list-style: none;
+  margin-right: 10rem;
+}
+
+.nav-links > li {
+  padding-right: 5rem;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+}
+
+.logo {
   width: 10%;
-  margin-top: 2%;
-  margin-bottom: -7%;
-  margin-left: 15%;
+  border-radius: 50%;
 }
 
 .restaurant-title {
@@ -42,7 +76,6 @@
 }
 
 .meal-list {
-  width: 100vw;
   display: grid;
   grid-template-columns: auto auto auto;
   grid-gap: 50px;
@@ -54,10 +87,10 @@
 }
 
 .meal-card {
-  margin: 30px auto;
-  width: 400px;
-  height: 400px;
-  border-radius: 40px;
+  margin: 3em auto;
+  width: 35em;
+  height: 35em;
+  border-radius: 2em;
   box-shadow: 5px 5px 30px 7px rgba(0, 0, 0, 0.25), -5px -5px 30px 7px rgba(0, 0, 0, 0.22);
   cursor: pointer;
   transition: 0.4s;
@@ -66,27 +99,26 @@
 .meal-card .meal-img {
   width: inherit;
   height: inherit;
-  border-radius: 40px;
 }
 
 .meal-card .meal-img img {
   width: inherit;
   height: inherit;
-  border-radius: 40px;
+  border-radius: 2em;
   object-fit: cover;
 }
 
 .meal-card .meal-name {
   text-align: center;
-  border-radius: 0 0 40px 40px;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 20px;
+  margin: 1em;
   color: rgb(56, 55, 55);
 }
 
 .meal-card:hover {
-  transform: scale(0.9, 0.9);
+  transform: scale(1.1);
   box-shadow:
     5px 5px 30px 15px rgba(0, 0, 0, 0.25),
     -5px -5px 30px 15px rgba(0, 0, 0, 0.22);
@@ -115,9 +147,10 @@
   align-items: center;
 }
 
-.like:hover,
-.comment:hover {
-  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+.like-icon,
+.comment-icon {
+  font-size: 2em;
+  color: rgb(233, 222, 0);
 }
 
 #footer {
@@ -129,6 +162,11 @@
 
 .heart-active {
   color: red;
+}
+
+.active {
+  text-decoration: underline;
+  text-underline-position: under;
 }
 
 .hidden {
