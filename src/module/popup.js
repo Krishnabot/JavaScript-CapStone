@@ -6,33 +6,34 @@ const popup = async () => {
   const MealsSection = document.querySelector('.meal-list');
   const footer = document.querySelector('footer');
   const CommentBtn = document.getElementsByClassName('comment');
-  const modal = document.querySelector('#modal');
+  const popup = document.querySelector('#popup-content');
 
-  const dataModal = async (id) => {
+  const datapopup = async (id) => {
     const fetchURL = `https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`;
     const meals = await fetch(fetchURL)
       .then((res) => res.json())
       .then((data) => data.meals);
     meals.forEach((element) => {
       if (element.idMeal === id) {
-        modal.innerHTML = `
-        <div class="modal">
+        popup.innerHTML = `
+        <div id="pop-up">
+        <div class="card">
         <div class="meal-header">
-            <button class="close"><i class="fas fa-times"></i></button>
-        </div>
-        <div class="modal-header-img">
-            <img class="modal-img" src="${element.strMealThumb}" alt="${element.strMeal}">
+            <i class="fas fa-times close-pop-up"></i>
             <h2 class="titme">${element.strMeal}</h2>
         </div>
-        <div class="modal-description">
-        <div class = "left">
+        <div class="popup-img">
+            <img class="popup-img" src="${element.strMealThumb}" alt="${element.strMeal}">
+        </div>
+        <div class="popup-columns">
+        <div class = "left-columns">
         <p> <span class="description-header">Area:</span> ${element.strArea} <p>
         <p> <span class="description-header">Ingredients:</span>
         <ul id = "ingredientsUl">
         </ul>
         </span><p>
         </div>
-        <div class = "right">
+        <div class = "right-columns">
         <p> <span class="description-header">Catagory:</span> ${element.strCatagory} <p>
         <p> <span class="description-header">Instructions:</span> <p> <span class = "recipe-instrruction"> ${element.strInstructions}  > read more </button> </span>
         </div>
@@ -56,6 +57,7 @@ const popup = async () => {
           <button id="submit-comment" class="submit-comment" data="${element.idMeal}"> Submit</button>
           
       </form>
+    </div>
     </div>
     </div>
       `;
@@ -83,7 +85,7 @@ const popup = async () => {
           header.classList.remove('hidden');
           MealsSection.classList.remove('hidden');
           footer.classList.remove('hidden');
-          modal.classList.add('hidden');
+          popup.classList.add('hidden');
         });
       }
       sendComment();
@@ -94,11 +96,11 @@ const popup = async () => {
     CommentBtn[i].addEventListener('click', () => {
       window.scrollTo(0, 0);
       const id = CommentBtn[i].getAttribute('data');
-      dataModal(id);
+      datapopup(id);
       header.classList.add('hidden');
       MealsSection.classList.add('hidden');
       footer.classList.add('hidden');
-      modal.classList.remove('hidden');
+      popup.classList.remove('hidden');
     });
   }
 };

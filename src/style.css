@@ -25,7 +25,7 @@ nav {
   z-index: 10;
   width: 100%;
   margin-bottom: 9rem;
-  background: linear-gradient(to right, #5B86E5, #36D1DC);
+  background: linear-gradient(to right, #5b86e5, #36d1dc);
 }
 
 .nav-links {
@@ -193,4 +193,67 @@ nav {
 .right {
   margin-top: -20%;
   margin-left: 25%;
+}
+
+#pop-up .card {
+  max-width: 80%;
+  margin: auto;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+body.pop-up {
+  overflow-y: hidden;
+}
+
+#pop-up {
+  overflow-y: scroll;
+}
+
+.meal-header {
+  display: flex;
+  flex-direction: column;
+  padding: 2em;
+}
+
+.meal-header > h2 {
+  font-size: 3em;
+}
+
+#pop-up i.close-pop-up {
+  position: absolute;
+  right: 11%;
+  color: #67798e;
+  mix-blend-mode: multiply;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.popup-img {
+  margin: auto;
+}
+
+.popup-img > img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5em;
+}
+
+.pop-up-columns {
+  display: grid;
+  grid-template-columns: 7fr 1fr;
+}
+
+#pop-up .tags > ul > li {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+#pop-up .tags ul li:nth-child(-n+3) {
+  display: block;
+}
+
+.left-column {
+  margin-right: 5px;
 }

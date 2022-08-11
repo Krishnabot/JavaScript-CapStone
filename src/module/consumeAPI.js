@@ -9,8 +9,8 @@ const fetchMeal = async () => {
   const MealsByArea = async (area) => {
     const PopulateMeals = (meals) => {
       meals.forEach((element) => {
-        const newMeal = document.createElement("div");
-        newMeal.classList.add("meal-container");
+        const newMeal = document.createElement('div');
+        newMeal.classList.add('meal-container');
         newMeal.innerHTML = ` 
       <div class="meal-card">
         <div class ="meal-img">
@@ -37,27 +37,27 @@ const fetchMeal = async () => {
     popup();
   };
 
-  const navlinks = document.querySelectorAll(".nav-links li");
+  const navlinks = document.querySelectorAll('.nav-links li');
   const resetLinks = () => {
     for (let i = 0; i < navlinks.length; i += 1) {
-      navlinks[i].classList.remove("active");
+      navlinks[i].classList.remove('active');
     }
   };
 
   for (let i = 0; i < navlinks.length; i += 1) {
-    navlinks[i].addEventListener("click", () => {
+    navlinks[i].addEventListener('click', () => {
       const area = navlinks[i].textContent.toLowerCase();
       MealsByArea(area);
       DisplayCount(area);
       resetLinks();
       setTimeout(() => like(), 100);
       Displaylikes();
-      navlinks[i].classList.add("active");
+      navlinks[i].classList.add('active');
     });
   }
   MealsByArea('american');
   DisplayCount('american');
-  displayComments("american");
+  displayComments('american');
 };
 
 fetchMeal();
