@@ -1,3 +1,5 @@
+@font-face { font-family: ReactiveAnchor; src: url('./assets/Fonts/ReactiveAnchor-L3L0n.ttf'); }
+
 :root {
   background-color: #ecf5ff;
   font-size: 62.5%;
@@ -28,6 +30,10 @@ nav {
   background: linear-gradient(to right, #5b86e5, #36d1dc);
 }
 
+ul {
+  list-style: none;
+}
+
 .nav-links {
   display: flex;
   font-size: 2rem;
@@ -54,24 +60,6 @@ nav {
 }
 
 .restaurant-title:hover {
-  color: rgb(112, 110, 110);
-}
-
-.menu1 {
-  text-decoration: none;
-  color: black;
-}
-
-.menu1:hover {
-  color: rgb(112, 110, 110);
-}
-
-.menu2 {
-  text-decoration: none;
-  color: black;
-}
-
-.menu2:hover {
   color: rgb(112, 110, 110);
 }
 
@@ -108,13 +96,14 @@ nav {
   object-fit: cover;
 }
 
-.meal-card .meal-name {
+.meal-name {
   text-align: center;
-  font-family: sans-serif;
   font-weight: bold;
+  font-size: 2.5em;
   font-size: 20px;
   margin: 1em;
   color: rgb(56, 55, 55);
+  font-family: ReactiveAnchor, sans-serif;
 }
 
 .meal-card:hover {
@@ -173,28 +162,6 @@ nav {
   display: none !important;
 }
 
-.titme {
-  text-align: center;
-  margin-left: -30%;
-}
-
-.modal-header-img {
-  margin-left: 25%;
-}
-
-.add-comments {
-  text-align: center;
-}
-
-.text-center2 {
-  text-align: center;
-}
-
-.right {
-  margin-top: -20%;
-  margin-left: 25%;
-}
-
 #pop-up .card {
   max-width: 80%;
   margin: auto;
@@ -204,6 +171,12 @@ nav {
 
 body.pop-up {
   overflow-y: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  padding-top: 12%;
 }
 
 #pop-up {
@@ -240,20 +213,68 @@ body.pop-up {
   border-radius: 0.5em;
 }
 
-.pop-up-columns {
+.popup-columns {
   display: grid;
-  grid-template-columns: 7fr 1fr;
+  grid-template-columns: 1fr 2fr;
+  padding: 3em;
 }
 
-#pop-up .tags > ul > li {
-  display: inline-block;
-  margin-bottom: 5px;
+.cuisine {
+  text-align: center;
+  font-size: 2em;
+  margin: 2em;
 }
 
-#pop-up .tags ul li:nth-child(-n+3) {
-  display: block;
+.leave-comment {
+  text-align: center;
+  margin: 1em;
 }
 
-.left-column {
-  margin-right: 5px;
+.comments-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.comments-wrap {
+  z-index: 1;
+  width: 100%;
+  padding: 45px;
+}
+
+.add-comments {
+  z-index: 1;
+  width: 100%;
+  padding: 45px;
+}
+
+form > input,
+form > textarea {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  box-sizing: border-box;
+  padding: 15px;
+  font-size: 14px;
+}
+
+form > button {
+  background: #4caf50;
+  width: 100%;
+  border: none;
+  padding: 15px;
+  color: #fff;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+form > button:hover,
+form > button:active,
+form > button:focus {
+  background: #43a047;
 }
