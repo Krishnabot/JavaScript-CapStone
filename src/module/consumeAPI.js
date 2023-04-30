@@ -5,7 +5,6 @@ import { displayComments } from './CommentSection.js';
 
 const MealList = document.querySelector('.meal-list');
 const areaLinks = document.querySelectorAll('.area-link');
-const navlinks = document.querySelectorAll('.nav-links li')
 const fetchMeal = async () => {
   const MealsByArea = async (area) => {
         MealList.innerHTML = '';
@@ -29,6 +28,7 @@ const fetchMeal = async () => {
 
         MealList.appendChild(newMeal);
       });
+      like();
     };
 
     const fetchURL = `https://www.themealdb.com/api/json/v1/1/filter.php?a=${area}`;
@@ -38,8 +38,6 @@ const fetchMeal = async () => {
     PopulateMeals(meals);
     popup();
   };
-
-  console.log(areaLinks);
 
  const resetLinks = () => {
   for (let i = 0; i < areaLinks.length; i += 1) {
@@ -64,7 +62,6 @@ const fetchMeal = async () => {
       MealsByArea(area);
       DisplayCount(area);
       resetLinks();
-      setTimeout(() => like(), 100);
       Displaylikes();
       displayComments();
       areaLink.classList.add('active');

@@ -40,14 +40,19 @@ const like = () => {
   const likeCountArray = Array.from(likebtns);
   likeCountArray.forEach((element) => {
     const likeId = element.getAttribute('data');
-    element.addEventListener('click', () => {
+    const handleClick = () => {
+      console.log("Like Clicked");
       element.classList.add('heart-active');
       PostLike(likeId);
       Displaylikes();
-    });
+      element.removeEventListener('click', handleClick);
+    };
+    element.addEventListener('click', handleClick);
   });
+  
 };
 
-setTimeout(() => like(), 500);
+
+// setTimeout(() => like(), 500);
 
 export { Displaylikes, like };

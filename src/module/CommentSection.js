@@ -2,15 +2,15 @@ const displayComments = async () => {
   const sendBtn = document.querySelector('#submit-comment');
   const commentList = document.querySelector('#comments-ul');
   const id = sendBtn.getAttribute('data');
-  const Count = document.querySelector('#comments-count');
+  const commentsCount = document.querySelector('#comments-count');
 
-  const get = () => fetch(
+  const getComments = () => fetch(
     ` https://us-central1-involvement-api.cloudfunctions.net/capstoneApi/apps/fqnn9lAjGXIKn1TiiiZP/comments?item_id=${id}`,
   ).then((res) => res.json());
 
-  const foodComments = await get();
+  const foodComments = await getComments();
 
-  Count.innerHTML = `${
+  commentsCount.innerHTML = `${
     foodComments.length > 0 ? `${foodComments.length}` : '0'
   }`;
 
