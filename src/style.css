@@ -14,6 +14,9 @@
 body {
   width: 100vw;
 }
+a {
+  text-decoration: none;
+}
 
 header {
   padding-bottom: 6em;
@@ -198,14 +201,14 @@ body.pop-up {
 }
 
 .meal-header > h2 {
-  font-size: 3em;
+  font-size: 2.5em;
 }
 
 #pop-up i.close-pop-up {
   position: absolute;
   right: 11%;
   color: #67798e;
-  mix-blend-mode: multiply;
+  opacity: 0.5;
   font-weight: 700;
   font-size: 20px;
 }
@@ -249,7 +252,7 @@ body.pop-up {
 .add-comments {
   z-index: 1;
   width: 100%;
-  padding: 45px;
+  padding: 45px 2em;
 }
 
 form > input,
