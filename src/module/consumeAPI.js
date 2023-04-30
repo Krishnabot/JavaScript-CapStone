@@ -1,12 +1,14 @@
 import popup from './popup.js';
-
 import { Displaylikes, like } from './GetAddLike.js';
 import DisplayCount from './count.js';
 import { displayComments } from './CommentSection.js';
 
 const MealList = document.querySelector('.meal-list');
+const areaLinks = document.querySelectorAll('.area-link');
+const navlinks = document.querySelectorAll('.nav-links li')
 const fetchMeal = async () => {
   const MealsByArea = async (area) => {
+        MealList.innerHTML = '';
     const PopulateMeals = (meals) => {
       meals.forEach((element) => {
         const newMeal = document.createElement('div');
@@ -37,28 +39,37 @@ const fetchMeal = async () => {
     popup();
   };
 
-  const navlinks = document.querySelectorAll('.nav-links li');
-  const resetLinks = () => {
-    for (let i = 0; i < navlinks.length; i += 1) {
-      navlinks[i].classList.remove('active');
-    }
-  };
+  console.log(areaLinks);
 
-  for (let i = 0; i < navlinks.length; i += 1) {
-    navlinks[i].addEventListener('click', () => {
-      const area = navlinks[i].textContent.toLowerCase();
+ const resetLinks = () => {
+  for (let i = 0; i < areaLinks.length; i += 1) {
+    areaLinks[i].classList.remove('active');
+  }
+};
+
+  const defaultArea = areaLinks[0].dataset.area;;
+  areaLinks[0].classList.add('active');
+  MealsByArea(defaultArea);
+  DisplayCount(defaultArea);
+  Displaylikes();
+  displayComments();
+
+
+  const areaNav = document.querySelector('.nav-links');
+  areaNav.addEventListener('click', (event) => {
+    event.preventDefault();
+    const areaLink = event.target.closest('.area-link');
+    if (areaLink) {
+      const area = areaLink.dataset.area;
       MealsByArea(area);
       DisplayCount(area);
       resetLinks();
       setTimeout(() => like(), 100);
       Displaylikes();
-      navlinks[i].classList.add('active');
-    });
-  }
-  MealsByArea('american');
-  DisplayCount('american');
-  displayComments('american');
+      displayComments();
+      areaLink.classList.add('active');
+    }
+  });
 };
 
 fetchMeal();
-Displaylikes();
